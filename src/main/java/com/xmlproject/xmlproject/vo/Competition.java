@@ -1,20 +1,16 @@
-package com.xmlproject.xmlproject.Model;
+package com.xmlproject.xmlproject.vo;
 
 import lombok.Builder;
 import lombok.Data;
-import org.springframework.stereotype.Component;
 
 @Data
-@Component
-public class Contest {
-    int id;
+@Builder
+public class Competition {
     String title;
     String showUnit;
-    String sourceWebName;
     String startDate;
     String endDate;
     String location;
     String locationName;
     String onSales;
-
 }

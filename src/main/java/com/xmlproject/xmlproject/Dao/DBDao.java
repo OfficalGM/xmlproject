@@ -1,11 +1,13 @@
 package com.xmlproject.xmlproject.Dao;
 
+import com.xmlproject.xmlproject.vo.Competition;
+
 import java.util.ArrayList;
 
 interface DBDao {
-    ArrayList find();
-    boolean store();
+    ArrayList findByTitle(String title);
+    int store();
     ArrayList findAll();
-    boolean update();
-    boolean delete();
+    int update(Competition competition);
+    int delete(String title);
 }
