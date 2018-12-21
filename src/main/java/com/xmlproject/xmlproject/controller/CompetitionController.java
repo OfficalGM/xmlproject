@@ -1,7 +1,8 @@
 package com.xmlproject.xmlproject.controller;
 
-import com.xmlproject.xmlproject.Service.WebParserService;
 
+import com.xmlproject.xmlproject.Service.CompetitionService;
+import com.xmlproject.xmlproject.webCrawler.WebParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,11 +13,13 @@ import java.util.ArrayList;
 @RestController
 public class CompetitionController {
     @Autowired
-    WebParserService webParserService;
-    @GetMapping("/")
-    public ArrayList index() {
+    private CompetitionService competitionService;
+    @GetMapping("/index")
+    public String index() {
 
-        return  webParserService.getParser();
+        competitionService.storeAll();
+        return "A";
+
     }
 
 

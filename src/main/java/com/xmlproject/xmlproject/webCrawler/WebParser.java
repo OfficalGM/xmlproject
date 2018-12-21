@@ -29,7 +29,7 @@ public class WebParser {
         return null;
     }
 
-    public ArrayList parser(String json) {
+    public ArrayList<Info> parser(String json) {
         if (json.equalsIgnoreCase(null)) {
             throw new NullPointerException("value is null");
         }

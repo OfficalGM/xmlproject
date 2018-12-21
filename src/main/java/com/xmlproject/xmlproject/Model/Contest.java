@@ -16,7 +16,5 @@ public class Contest {
     String location;
     String locationName;
     String onSales;
-    Double latitude;
-    Double longitude;
 
 }
